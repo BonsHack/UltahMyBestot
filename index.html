@@ -1,77 +1,101 @@
 <!DOCTYPE html>
-<html>
-<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-  
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script><link href="https://feeldreams.github.io/kalokita/style.css" rel="stylesheet" type="text/css" />
-  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-  
+<html lang="id">
 <head>
-<title>Script HTML buat Kamu</title>
-<style>
-  #wallpaper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    animation: fadeBackground 20s infinite;
-  }
-  @keyframes fadeBackground {
-    0%, 25% { background-image: url('https://i.ibb.co.com/KFMvnXd/IMG-20241029-122557-799-2.jpg'); opacity: 0; }
-    25%, 50% { background-image: url('https://i.ibb.co.com/pr280tF/IMG-20241029-122548-533-2.jpg'); opacity: 0.5; }
-    50%, 75% { background-image: url('https://i.ibb.co.com/9hm23gN/IMG-20241029-122546-510-2.jpg'); opacity: 0.7; }
-    75%, 100% { background-image: url('https://i.ibb.co.com/mhjMbcy/IMG-20241029-122555-616.jpg'); opacity: 1; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card PIN Input</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.ibb.co/pr280tF/IMG-20241029-122548-533-2.jpg'); /* URL gambar latar belakang */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .pin-display {
+            font-size: 24px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            height: 40px;
+            width: 100%;
+        }
+        .button {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .btn {
+            padding: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
 </head>
 <body>
-	
-   <audio src="https://github.com/BonsHack/my-project-html-ultah/raw/refs/heads/main/Lagu%20Ulang%20Tahun%20Anak%20_%20Selamat%20Ulang%20Tahun%20-%20Lagu%20Anak%20Indonesia%20Balita%20(youtube).mp3" id="linkmp3" class="sembunyi"></audio>
-   
-   <div id="bodyblur">
-     <img src="https://i.ibb.co.com/KFMvnXd/IMG-20241029-122557-799-2.jpg" id="wallpaper"/><div id="beneranblur"></div>
-   </div>
-   
-   <div id='Content'>
-     <div id="loveIn">
-       <label class='lovein'><svg class='line' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g transform='translate(2.550170, 3.550158)'><path d='M0.371729633,8.89614246 C-0.701270367,5.54614246 0.553729633,1.38114246 4.07072963,0.249142462 C5.92072963,-0.347857538 8.20372963,0.150142462 9.50072963,1.93914246 C10.7237296,0.0841424625 13.0727296,-0.343857538 14.9207296,0.249142462 C18.4367296,1.38114246 19.6987296,5.54614246 18.6267296,8.89614246 C16.9567296,14.2061425 11.1297296,16.9721425 9.50072963,16.9721425 C7.87272963,16.9721425 2.09772963,14.2681425 0.371729633,8.89614246 Z'></path><path d='M13.23843,4.013842 C14.44543,4.137842 15.20043,5.094842 15.15543,6.435842'></path></g></svg></label>
-     </div>
-     <p id="ket">Sentuh LOVEnya!</p>
-     <p id="kot"><a href="https://bit.ly/htmlfeeldream" target="_blank">pencet love nya bub</a></p>
-     <div class="kumpulanstiker">
-         <img src="https://feeldreams.github.io/hearthappy.gif" id="fotostiker"/>
-         <img src="https://feeldreams.github.io/bwa2.gif" id="fotostiker2"/>
-         <img src="https://feeldreams.github.io/mikir.gif" id="fotostiker3"/>
-         <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker4"/>
-         <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5"/>
-         <img src="https://feeldreams.github.io/mmm.gif" id="fotostiker6"/>
-         <img src="https://feeldreams.github.io/ciumin.gif" id="fotostiker7"/>
-         <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker8"/>
-     </div>
-     <div><blockquote id='bq' data-text='&#9829;'>
-       <p id="kalimat"><b class="alt">Hai Ica My Bestot! </b><br><br>Ada yang mau aku ucapin nih</p>
-       <p id="kalimat1"><b class="alt">Barokallahu Fi umrik Yaa . semoga doa doa yang kamu minta segera terkabul. dan satu inget buat keluarga kamu bangga oke<br>Mau Kado ga bub? </b></p>
-       <div class="sembunyi">
-         <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif"/>
-         <span id="kataditolak">ywdah ga mau mah </span>
-       </div>
-       <p id="kalimat2ngetikv2">Yah gamau  Padahal aku udah siapin kado spesial walau sederhana,<br> </p>
-       <span id="kalpertanyaan">Nah kan kamu ulang tahun boleh kali senyum dulu biar nambah cantiknya.<br>owh iya kamu beneran gamau kado kah bub ?<b class='garismerah'>Yakin Gamau</b> Kado? </span>
-       <p id="kalimat3ngetik"><b class="alt">Yeaayy!! <br><br>Makasii udah mau nerima kado dari Aku. maaf ya gabisa ngasih yang mahal<br>Coba Sekarang kamu muter balik dulu !!</b><br><br>owh iya catat tanggal kenangan dan kejutan kita ini ya:<br><span id="tgl"></span></p>
-       <p id="opsL">Klik untuk Lanjut</p>
-     </blockquote></div>
-     
-     <div id="Tombol">
-       <a id="By" onClick="fungsimau()">ga mau</a>
-       <a id="Bn" onClick="btn='Bn';fungsibaru(btn)">Mau Dong </a>
-       <span id="penggantiBy" class="sembunyi"> mau</span>
-       <span id="penggantiBn" class="sembunyi">Gamau Ah kamu miskin</span>
-     </div>
-     <span id="pesanWA" class="sembunyi">makasih Ya bub </span>
-   </div>
-<script>const body = document.querySelector("body");const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); audio = new Audio('' + linkmp3.src);const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;tgl.innerHTML += " " + today;function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);</script>
-<script src="https://feeldreams.github.io/kalokita/script.js"></script>
+
+<div class="container">
+    <h2>Masukkan PIN</h2>
+    <input type="password" id="pinDisplay" class="pin-display" disabled>
+    <div class="button">
+        <button class="btn" onclick="addToPin('1')">1</button>
+        <button class="btn" onclick="addToPin('2')">2</button>
+        <button class="btn" onclick="addToPin('3')">3</button>
+        <button class="btn" onclick="addToPin('4')">4</button>
+        <button class="btn" onclick="addToPin('5')">5</button>
+        <button class="btn" onclick="addToPin('6')">6</button>
+        <button class="btn" onclick="addToPin('7')">7</button>
+        <button class="btn" onclick="addToPin('8')">8</button>
+        <button class="btn" onclick="addToPin('9')">9</button>
+        <button class="btn" onclick="clearPin()">C</button>
+        <button class="btn" onclick="addToPin('0')">0</button>
+        <button class="btn" onclick="checkPin()">OK</button>
+    </div>
+</div>
+
+<script>
+    let pin = "";
+
+    function addToPin(number) {
+        if (pin.length < 7) { // Maximum length for PIN
+            pin += number;
+            document.getElementById('pinDisplay').value = pin.replace(/./g, '*'); // Show as asterisks
+        }
+    }
+
+    function clearPin() {
+        pin = "";
+        document.getElementById('pinDisplay').value = '';
+    }
+
+    function checkPin() {
+        if (pin === "5112005") {
+            window.location.href = "ultahica.html"; // Alihkan ke halaman ultahica.html
+        } else {
+            alert("PIN Salah! Silakan coba lagi.");
+            clearPin();
+        }
+    }
+</script>
+
 </body>
 </html>
